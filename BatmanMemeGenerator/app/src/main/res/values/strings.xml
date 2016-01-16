@@ -5,4 +5,12 @@
     <string name="picture">Picture</string>
     <string name="capture">Launch Camera</string>
     <string name="take_picture">Take a picture</string>
+    <string name="meme_top_text">Top text</string>
+    <string name="bottom_meme_text">Bottom text</string>
+    <string name="update_meme_btn">Update meme</string>
+    <string name="generate_meme_btn">Generate Meme</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="make_meme_btn">Make MEME</string>
 </resources>

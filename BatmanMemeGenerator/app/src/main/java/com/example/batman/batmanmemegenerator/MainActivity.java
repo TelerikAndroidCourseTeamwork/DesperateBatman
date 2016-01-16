@@ -34,4 +34,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TakeAPictureActivity.class);
         startActivity(intent);
     }
+
+    public void goToMemeGeneration(View view) {
+        Intent intent = new Intent(this, GenerateMemeActivity.class);
+        startActivity(intent);
+    }
 }

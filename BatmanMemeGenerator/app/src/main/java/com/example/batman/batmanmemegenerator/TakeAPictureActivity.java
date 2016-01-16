@@ -1,5 +1,6 @@
 package com.example.batman.batmanmemegenerator;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Activity;
@@ -98,5 +99,13 @@ public class TakeAPictureActivity extends AppCompatActivity implements OnClickLi
             Toast toast = Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT);
             toast.show();
         }
+    }
+
+    public void gotoMemeGeneration(View view){
+        Intent intent = new Intent(this, GenerateMemeActivity.class);
+        ImageView imageView = (ImageView)findViewById(R.id.picture);
+        Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
+        intent.putExtra("BitmapImage", bitmap);
+        startActivity(intent);
     }
 }

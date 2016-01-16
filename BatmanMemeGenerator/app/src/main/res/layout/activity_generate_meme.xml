@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.batman.batmanmemegenerator.GenerateMemeActivity">
+
+    <EditText
+        android:id="@+id/topTextInput"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/meme_top_text"/>
+
+    <EditText
+        android:id="@+id/bottomTextInput"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/topTextInput"
+        android:layout_marginTop="10dp"
+        android:hint="@string/bottom_meme_text"/>
+
+    <Button
+        android:id="@+id/update_meme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottomTextInput"
+        android:layout_alignLeft="@+id/bottomTextInput"
+        android:layout_marginTop="10dp"
+        android:text="@string/update_meme_btn"
+        android:onClick="onMemeTextUpdate"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="300dp" android:layout_height="300dp"
+        android:background="@drawable/main_activity_bg"
+        android:layout_below="@+id/update_meme"
+        android:layout_alignLeft="@+id/update_meme"
+        android:layout_marginTop="20dp"
+        android:id="@+id/canvas">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/topText"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/bottomText"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="33dp"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

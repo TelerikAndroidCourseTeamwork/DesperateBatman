@@ -27,7 +27,8 @@
             android:value="Ttnbu2Hvuvla6zZ1PZ3xBpflOlq5cSigpMA4tFbv" />
 
         <activity android:name=".ChooseMemeActivity" />
-        <activity android:name=".TakeAPictureActivity"></activity>
+        <activity android:name=".TakeAPictureActivity" />
+        <activity android:name=".GenerateMemeActivity"></activity>
     </application>
 
 </manifest>

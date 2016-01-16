@@ -30,4 +30,15 @@
         android:layout_centerHorizontal="true"
         android:background="#a0a0a0"
         android:onClick="goToCapture"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/generate_meme_btn"
+        android:id="@+id/btn_generate_meme"
+        android:layout_below="@+id/btn_open_capture"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#a0a0a0"
+        android:onClick="goToMemeGeneration"/>
 </RelativeLayout>
