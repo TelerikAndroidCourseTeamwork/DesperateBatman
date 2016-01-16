@@ -1,7 +1,9 @@
 package com.example.batman.batmanmemegenerator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.parse.GetCallback;
@@ -26,11 +28,16 @@ public class MainActivity extends AppCompatActivity {
         query.getInBackground("jWnsvrDIbs", new GetCallback<ParseObject>() {
             public void done(ParseObject meme, ParseException e) {
                 if (e == null) {
-                    Toast.makeText(MainActivity.this, meme.get("cat").toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this, "shit", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    public void goToGallery(View view) {
+        Intent intent = new Intent(this, ChooseMemeActivity.class);
+        startActivity(intent);
     }
 }

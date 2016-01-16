@@ -7,6 +7,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/main_activity_bg"
     tools:context="com.example.batman.batmanmemegenerator.MainActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_meme"
+        android:id="@+id/btn_open_galery"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#a0a0a0"
+        android:onClick="goToGallery"/>
 </RelativeLayout>
