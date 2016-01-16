@@ -23,17 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         Parse.enableLocalDatastore(this);
         Parse.initialize(this);
-
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("Meme");
-        query.getInBackground("jWnsvrDIbs", new GetCallback<ParseObject>() {
-            public void done(ParseObject meme, ParseException e) {
-                if (e == null) {
-                    Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "shit", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
     }
 
     public void goToGallery(View view) {
