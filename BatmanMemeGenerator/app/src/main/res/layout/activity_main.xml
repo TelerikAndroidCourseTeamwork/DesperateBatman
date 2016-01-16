@@ -19,4 +19,15 @@
         android:layout_centerHorizontal="true"
         android:background="#a0a0a0"
         android:onClick="goToGallery"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/take_picture"
+        android:id="@+id/btn_open_capture"
+        android:layout_below="@+id/btn_open_galery"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#a0a0a0"
+        android:onClick="goToCapture"/>
 </RelativeLayout>

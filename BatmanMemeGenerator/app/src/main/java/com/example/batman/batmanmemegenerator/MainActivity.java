@@ -29,4 +29,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ChooseMemeActivity.class);
         startActivity(intent);
     }
+
+    public void goToCapture(View view) {
+        Intent intent = new Intent(this, TakeAPictureActivity.class);
+        startActivity(intent);
+    }
 }
