@@ -18,6 +18,10 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.parse.ParseFile;
+import com.parse.ParseObject;
+
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -51,12 +55,24 @@ public class GenerateMemeActivity extends AppCompatActivity {
     }
 
     public void onMemeSave(View view){
-        // TODO:
         RelativeLayout layout = (RelativeLayout)findViewById(R.id.canvas);
         layout.setDrawingCacheEnabled(true);
         Bitmap bitmap = Bitmap.createBitmap(layout.getDrawingCache());
-        MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, "Meme", "New meme");
-        layout.setDrawingCacheEnabled(false);
 
+        //bitmap to byte[]
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] data = stream.toByteArray();
+
+        // save the byte[] to Parse as file
+        ParseFile file = new ParseFile("meme.png", data);
+        file.saveInBackground();
+
+        // create Meme and attach file
+        ParseObject meme = new ParseObject("Meme");
+        meme.put("image", file);
+        meme.saveInBackground();
+
+        // TODO: go to all memes
     }
 }
