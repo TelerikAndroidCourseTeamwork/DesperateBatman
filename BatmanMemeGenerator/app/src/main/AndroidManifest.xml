@@ -28,7 +28,8 @@
 
         <activity android:name=".ChooseMemeActivity" />
         <activity android:name=".TakeAPictureActivity" />
-        <activity android:name=".GenerateMemeActivity"></activity>
+        <activity android:name=".GenerateMemeActivity" />
+        <activity android:name=".ViewMemesActivity"></activity>
     </application>
 
 </manifest>

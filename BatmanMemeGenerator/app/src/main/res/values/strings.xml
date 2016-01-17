@@ -9,6 +9,7 @@
     <string name="bottom_meme_text">Bottom text</string>
     <string name="update_meme_btn">Update meme</string>
     <string name="generate_meme_btn">Generate Meme</string>
+    <string name="view_memes">View Memes</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

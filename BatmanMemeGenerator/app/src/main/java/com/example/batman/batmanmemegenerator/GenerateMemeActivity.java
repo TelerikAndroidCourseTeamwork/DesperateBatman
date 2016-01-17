@@ -18,8 +18,10 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
+import com.parse.SaveCallback;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -68,11 +70,21 @@ public class GenerateMemeActivity extends AppCompatActivity {
         ParseFile file = new ParseFile("meme.png", data);
         file.saveInBackground();
 
+
+        // Create intent for ViewMemes
+        final Intent intent = new Intent(this, ViewMemesActivity.class);
+
         // create Meme and attach file
         ParseObject meme = new ParseObject("Meme");
         meme.put("image", file);
-        meme.saveInBackground();
-
-        // TODO: go to all memes
+        meme.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e == null) {
+                    // Go to ViewMemes
+                    startActivity(intent);
+                }
+            }
+        });
     }
 }

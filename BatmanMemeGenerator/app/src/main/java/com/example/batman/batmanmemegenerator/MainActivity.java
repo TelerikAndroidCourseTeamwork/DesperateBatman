@@ -39,4 +39,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GenerateMemeActivity.class);
         startActivity(intent);
     }
+
+    public void goToViewMemes(View view) {
+        Intent intent = new Intent(this, ViewMemesActivity.class);
+        startActivity(intent);
+    }
 }
