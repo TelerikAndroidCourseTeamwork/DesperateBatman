@@ -35,13 +35,14 @@ public class PageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View page = inflater.inflate(R.layout.fragment_page, container, false);
 
-        page.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        page.setOnLongClickListener(new View.OnLongClickListener(){
+            public boolean onLongClick(View v){
                 Intent intent = new Intent(v.getContext(), GenerateMemeActivity.class);
                 ImageView imageView = (ImageView)v.findViewById(R.id.image);
                 Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
                 intent.putExtra("BitmapImage", bitmap);
                 startActivity(intent);
+                return true;
             }
         });
 

@@ -25,7 +25,10 @@ public class ChooseMemeActivity extends AppCompatActivity {
             R.drawable.meme2,
             R.drawable.meme3,
             R.drawable.meme4,
-            R.drawable.meme5};
+            R.drawable.meme5,
+            R.drawable.meme6,
+            R.drawable.meme7,
+            R.drawable.meme8};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
