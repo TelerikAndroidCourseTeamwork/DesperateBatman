@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -57,6 +58,8 @@ public class GenerateMemeActivity extends AppCompatActivity {
     }
 
     public void onMemeSave(View view){
+        Toast.makeText(GenerateMemeActivity.this, "The request is being processed.\n Please wait.", Toast.LENGTH_LONG).show();
+
         RelativeLayout layout = (RelativeLayout)findViewById(R.id.canvas);
         layout.setDrawingCacheEnabled(true);
         Bitmap bitmap = Bitmap.createBitmap(layout.getDrawingCache());
